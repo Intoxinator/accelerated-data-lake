@@ -1,0 +1,58 @@
+{
+  "fileSettings": {
+    "fileFormat": "csv",
+    "fileNamePattern": "spms/spms-fullbook-[0-9]{8}.csv",
+    "calculateMD5": "True",
+    "stagingFolderPath": "spms",
+    "stagingPartitionSettings": {
+      "expression": "year=%Y/month=%m/day=%d",
+      "timezone": "Australia/Perth"
+    }
+  },
+  "fileType": "SPMSFullBook",
+  "metadata": {
+    "creator": "LSWA",
+    "quality": "HIGH",
+    "sourcesystem": "NTR Data Mart"
+  },
+  "schema": {
+    "properties": {
+      "concat": {
+        "type": "string"
+      },
+      "notificationcode": {
+        "type": "string"
+      },
+      "documentidentifier": {
+        "type": "string"
+      },
+      "legalentityname": {
+        "type": "string"
+      },
+      "postcode": {
+        "type": "string"
+      },
+      "localityname": {
+        "type": "string"
+      },
+      "road1name": {
+        "type": "string"
+      },
+      "road1typecode": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "concat",
+      "notificationcode",
+      "documentidentifier",
+      "legalentityname"
+    ],
+    "type": "object"
+  },
+  "tags": {
+    "dataOwner": "LSWA",
+    "dataSource": "NTR Data Mart",
+    "pii": "TRUE"
+  }
+}

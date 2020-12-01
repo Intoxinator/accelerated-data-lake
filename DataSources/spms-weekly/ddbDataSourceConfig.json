@@ -1,0 +1,36 @@
+{
+	"fileSettings": {
+		"fileFormat": "csv",
+		"fileNamePattern": "spms/spms-weekly-[0-9]{8}.csv",
+		"calculateMD5": "True",
+		"stagingFolderPath": "spms/weekly",
+		"stagingPartitionSettings": {
+			"expression": "year=%Y/month=%m/day=%d",
+			"timezone": "Australia/Perth"
+		}
+	},
+	"fileType": "SPMSWeekly",
+	"metadata": {
+		"creator": "LSWA",
+		"quality": "HIGH",
+		"sourcesystem": "NTR Data Mart"
+	},
+	"schema": {
+      "concat": {
+        "type": "string"
+      }
+  },
+		"required": [
+			"concat",
+			"notificationcode",
+			"documentidentifier",
+			"legalentityname"
+		],
+		"type": "object"
+	},
+	"tags": {
+		"dataOwner": "LSWA",
+		"dataSource": "NTR Data Mart",
+		"pii": "TRUE"
+	}
+}
