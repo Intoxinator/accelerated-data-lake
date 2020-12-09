@@ -1,36 +1,83 @@
 {
-	"fileSettings": {
-		"fileFormat": "csv",
-		"fileNamePattern": "spms/spms-weekly-[0-9]{8}.csv",
-		"calculateMD5": "True",
-		"stagingFolderPath": "spms/weekly",
-		"stagingPartitionSettings": {
-			"expression": "year=%Y/month=%m/day=%d",
-			"timezone": "Australia/Perth"
-		}
-	},
-	"fileType": "SPMSWeekly",
-	"metadata": {
-		"creator": "LSWA",
-		"quality": "HIGH",
-		"sourcesystem": "NTR Data Mart"
-	},
-	"schema": {
-      "concat": {
-        "type": "string"
-      }
+  "fileSettings": {
+    "fileFormat": "csv",
+    "fileNamePattern": "spms/spms-weekly-[0-9]{8}.csv",
+    "calculateMD5": "True",
+    "stagingFolderPath": "spms/weekly",
+    "stagingPartitionSettings": {
+      "expression": "year=%Y/month=%m/day=%d",
+      "timezone": "Australia/Perth"
+    }
   },
-		"required": [
-			"concat",
-			"notificationcode",
-			"documentidentifier",
-			"legalentityname"
-		],
-		"type": "object"
-	},
-	"tags": {
-		"dataOwner": "LSWA",
-		"dataSource": "NTR Data Mart",
-		"pii": "TRUE"
-	}
+  "fileType": "SPMSWeekly",
+  "metadata": {
+    "creator": "LSWA",
+    "quality": "HIGH",
+    "sourcesystem": "NTR Data Mart"
+  },
+  "schema": {
+    "Title identifier": { "type": "string" },
+    "Owner": { "type": "string" },
+    "Document number": { "type": "string" },
+    "Registered date": { "type": "string" },
+    "Rank": { "type": "string" },
+    "Mortgagee name": { "type": "string" },
+    "Transaction type": { "type": "string" },
+    "Description": { "type": "string" },
+    "displayformat": { "type": "string" },
+    "addresstype": { "type": "string" },
+    "line1": { "type": "string" },
+    "line2": { "type": "string" },
+    "line3": { "type": "string" },
+    "line4": { "type": "string" },
+    "postcode": { "type": "string" },
+    "countrycode": { "type": "string" },
+    "singleline": { "type": "string" },
+    "secondarycomplex": { "type": "string" },
+    "addresssitename": { "type": "string" },
+    "localityname": { "type": "string" },
+    "state": { "type": "string" },
+    "unittypecode": { "type": "string" },
+    "unitnumber": { "type": "string" },
+    "leveltypecode": { "type": "string" },
+    "levelnumber": { "type": "string" },
+    "complexroad1numberfrom": { "type": "string" },
+    "complexroad1numberto": { "type": "string" },
+    "complexroad1name": { "type": "string" },
+    "complexroad1typecode": { "type": "string" },
+    "complexroad1suffixcode": { "type": "string" },
+    "complexroad2numberfrom": { "type": "string" },
+    "complexroad2numberto": { "type": "string" },
+    "complexroad2name": { "type": "string" },
+    "complexroad2typecode": { "type": "string" },
+    "complexroad2suffixcode": { "type": "string" },
+    "postaldeliverytypecode": { "type": "string" },
+    "postaldeliverynumber": { "type": "string" },
+    "road1lotnumber": { "type": "string" },
+    "road1numberfrom": { "type": "string" },
+    "road1numberto": { "type": "string" },
+    "road1name": { "type": "string" },
+    "road1typecode": { "type": "string" },
+    "road1suffixcode": { "type": "string" },
+    "road2lotnumber": { "type": "string" },
+    "road2numberfrom": { "type": "string" },
+    "road2numberto": { "type": "string" },
+    "road2name": { "type": "string" },
+    "road2typecode": { "type": "string" },
+    "road2suffixcode": { "type": "string" },
+    "verified": { "type": "string" }
+  },
+  "required": [
+    "concat",
+    "notificationcode",
+    "documentidentifier",
+    "legalentityname"
+  ],
+  "type": "object"
+},
+"tags": {
+  "dataOwner": "LSWA",
+  "dataSource": "NTR Data Mart",
+  "pii": "TRUE"
+}
 }
